@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fraunces", serif;
+  /* font-family: "Montserrat", sans-serif; */
+  text-decoration: none;
+}
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --bg-clr: hsl(30, 38%, 92%);
+  --darkBlue: hsl(212, 21%, 14%);
+  --grayishBlue: hsl(228, 12%, 48%);
+  --p-font: 14px;
+}
+
+body {
+  background-color: var(--bg-clr);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*--- Start Card ---*/
+.card {
+  background-color: white;
+  display: flex;
+  max-width: 650px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.card .left-side {
+  max-width: 50%;
+  height: auto;
+}
+.card .left-side .desk-img {
+  max-width: 100%;
+  height: 100%;
+}
+.card .left-side .mobile-img {
+  display: none;
+}
+.card .right-side {
+  max-width: 50%;
+  padding: 30px;
+}
+.card .right-side > span {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--grayishBlue);
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin-bottom: 20px;
+}
+.card .right-side h1 {
+  font-size: 32px;
+  text-wrap: balance;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+
+.card .right-side p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--grayishBlue);
+  text-wrap: balance;
+  font-size: var(--p-font);
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+.card .right-side .price {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.card .right-side .price .after {
+  color: var(--darkCyan);
+  font-size: 35px;
+  margin-right: 25px;
+}
+.card .right-side .price .before {
+  color: var(--grayishBlue);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.card .right-side a {
+  display: block;
+  background-color: var(--darkCyan);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.card .right-side a i {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 370px;
+  }
+  .card .left-side {
+    max-width: 100%;
+  }
+  .card .left-side .desk-img {
+    display: none;
+  }
+  .card .left-side .mobile-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .card .right-side {
+    max-width: 100%;
+  }
+  .card .right-side h1 {
+    font-size: 35px;
+  }
+  .card .right-side p {
+    text-wrap: wrap;
+  }
+}
